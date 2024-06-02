@@ -1,52 +1,47 @@
 body {
     margin: 0;
     padding: 0;
-    3 /* Replace 'path/to/your/image.jpg' with the actual path to your image */
-    background-size: cover; /* Cover the entire viewport */
-    background-position: center; /* Center the background image */
-    font-family: Arial, sans-serif; /* Change the font family as needed */
-  }
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
 .header-bar {
-    
     justify-content: center;
     align-items: center;
     background-color: #efecec;
     color: #dd2626;
-    padding: 12px 20px;
-  }
-  
-  .side-nav {
+    padding: 1px 50px;
+    height:70px;
+}
+
+.side-nav {
     display: flex;
     flex-direction: column;
     padding: 10px;
     background-color: #efecec;
     color: #000000;
-    transition: width 0.3s; /* Add transition effect for smooth animation */
+    transition: width 0.3s;
     overflow: hidden;
-    width: 50px;
-    height:591px; /* Initial width for collapsed state */
-  }
-  
-  
-  
-  
-  .nav-links {
+    width: 30px;
+    height: 635px; 
+}
+
+.nav-links {
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
-  }
-  
-  .nav-link {
+}
+
+.nav-link {
     color: #080908;
     text-decoration: none;
     padding: 5px 10px;
-  }
-  
-  .nav-link:hover {
+}
+
+.nav-link:hover {
     text-decoration: underline;
-  }
-  
-  .nav-link:not(:first-child) {
+}
+
+.nav-link:not(:first-child) {
     margin-top: 10px;
-  }
-  
+}

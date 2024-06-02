@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './app.css';
 import { FaHome, FaPlus, FaEdit, FaTrash, FaEllipsisV } from 'react-icons/fa';
 
-function pp() {
+function App() {
   const [showNav, setShowNav] = useState(false);
 
   const toggleNav = () => {
@@ -12,21 +12,19 @@ function pp() {
   return (
     <div>
       <div className="header-bar">  
-        <h1>CARGO</h1>
+        <h1>ShipLOGS</h1>
       </div>
-      <button className="dropdown-btn" onClick={toggleNav}>
-        <FaEllipsisV />
-      </button>
+      
       <div className={`side-nav ${showNav ? 'show' : ''}`} onClick={toggleNav}>
         <div className="nav-links">
-          <a href="#" className="nav-link"><FaHome /> Home</a>
-          <a href="#" className="nav-link"><FaPlus /> Add Container</a>
-          <a href="#" className="nav-link"><FaEdit /> Update Container</a>
-          <a href="#" className="nav-link"><FaTrash /> Delete Container</a>
+          <a href="#" className="nav-link"><FaHome /></a>
+          <a href="#" className="nav-link"><FaPlus /></a>
+          <a href="#" className="nav-link"><FaEdit /></a>
+          <a href="#" className="nav-link"><FaTrash /></a>
         </div>
       </div>
     </div>
   );
 }
 
-export default app;
+export default App;

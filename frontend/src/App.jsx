@@ -1,30 +1,27 @@
-import React, { useState } from 'react';
-import './app.css';
-import { FaHome, FaPlus, FaEdit, FaTrash, FaEllipsisV } from 'react-icons/fa';
-
-function App() {
-  const [showNav, setShowNav] = useState(false);
-
-  const toggleNav = () => {
-    setShowNav(!showNav);
-  };
-
-  return (
-    <div>
-      <div className="header-bar">  
-        <h1>ShipLOGS</h1>
+import React from 'react'
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import Home from './pages/Home';
+import Addcontainer from './pages/Addcontainer';
+import Deletecontainer from './pages/Deletecontainer';
+import Updatecontainer from './pages/Updatecontainer'
+import Navbar from './components/Navbar';
+import TitleBar from './components/TitleBar';
+import './App.css';
+function App()
+{
+  return(
+    <BrowserRouter>
+    <TitleBar />
+    <Navbar />
+    <div className="content">
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/add" element={<Addcontainer/>} />
+            <Route path="/delete" element={<Deletecontainer/>} />
+            <Route path="/update" element={<Updatecontainer/>} />
+        </Routes>
       </div>
-      
-      <div className={`side-nav ${showNav ? 'show' : ''}`} onClick={toggleNav}>
-        <div className="nav-links">
-          <a href="#" className="nav-link"><FaHome /></a>
-          <a href="#" className="nav-link"><FaPlus /></a>
-          <a href="#" className="nav-link"><FaEdit /></a>
-          <a href="#" className="nav-link"><FaTrash /></a>
-        </div>
-      </div>
-    </div>
-  );
+    </BrowserRouter>
+  )
 }
-
 export default App;

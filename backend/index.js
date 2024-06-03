@@ -13,7 +13,7 @@ mongoose.connect(url)
 .catch((err)=>{
     console.log(err.message);
 })
-app.use('/api/cargo',Cargo);
+app.use(Cargo);
 
 app.listen(3000, () => {
     console.log("Server is running on port 3000");

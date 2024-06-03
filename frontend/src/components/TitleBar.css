@@ -1,0 +1,16 @@
+
+.title-bar {
+    background-color: #e8ebee;
+    color:red;
+    padding: 1rem;
+    height:30px;
+    position: fixed;
+    top: 0; 
+    width: 1505px;
+  }
+  
+  .title-bar h1 {
+    margin: 0;
+    margin-left: 30px;
+  }
+  
